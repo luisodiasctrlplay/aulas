@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h3 {
+    font-family: "Comic Sans MS";
+}
+
+img[src = "imagem2.jpg"] {
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+a[href ^= "pasta01/"] {
+    color: orange;
+    font-weight: bold;
+}
+
+a[href *= "/aula"] {
+    color: rgb(216, 244, 0);
+    font-weight: bold;
+}

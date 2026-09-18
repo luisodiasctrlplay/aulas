@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07 - Hierarquias, Seletores de Atributo e Layout</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO (Header) - Imagem 09 da aula -->
+    <header>
+        <h1>Aula 07: Hierarquias, Expressões Regulares e Layout</h1>
+        <p>Exemplo prático do material do curso Ctrl+Young</p>
+    </header>
+
+    <!-- 2. BARRA DE NAVEGAÇÃO (Topnav) - Imagens 10 e 11 da aula -->
+    <div class="topnav">
+        <a href="#hierarquia">Hierarquia DOM</a>
+        <a href="#atributos">Expressões Regulares</a>
+        <a href="#layout">Website Layout</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <!-- 3. CONTEÚDO EM COLUNAS DESIGUAIS (25% / 50% / 25%) - Imagens 12, 13 e 14 -->
+    <div class="row">
+
+        <!-- Coluna da Esquerda (Side - 25%) -->
+        <div class="column side" id="hierarquia">
+            <h3>Hierarquia DOM</h3>
+            <p>Os textos do <code>&lt;body&gt;</code> usam a fonte <strong>Verdana</strong>.</p>
+            <p>Já os títulos <code>&lt;h3&gt;</code> usam a fonte <strong>Comic Sans MS</strong>.</p>
+            <div class="nota-explicativa">
+                <p><strong>Por que isso acontece?</strong></p>
+                <p>Como o <code>&lt;h3&gt;</code> está em um nível mais específico (mais abaixo) na árvore DOM, sua formatação tem preferência sobre a herança do <code>&lt;body&gt;</code>.</p>
+            </div>
+        </div>
+
+        <!-- Coluna do Meio (Middle - 50% - Conteúdo Principal) -->
+        <div class="column middle" id="atributos">
+            <h2>Expressões Regulares (Seletores de Atributo)</h2>
+            <p>Formatando elementos com base no valor de seus atributos:</p>
+
+            <!-- Exemplo 1: Exatamente Igual (=) - Imagens 05 e 06 -->
+            <div class="card-exemplo">
+                <h3>1. Exatamente igual (=)</h3>
+                <p>Apenas a imagem com <code>src="img/imagem2.jpg"</code> fica redonda (<code>border-radius: 50%</code>):</p>
+                <div class="galeria-imagens">
+                    <img src="img/imagem1.jpg" alt="Imagem 1" />
+                    <img src="img/imagem2.jpg" alt="Imagem 2 (Arredondada)" />
+                    <img src="img/imagem3.jpg" alt="Imagem 3" />
+                </div>
+            </div>
+
+            <!-- Exemplo 2: Inicia com (^=) - Imagens 07 e 08 -->
+            <div class="card-exemplo">
+                <h3>2. Inicia com (^=)</h3>
+                <p>Links iniciados com <code>pasta1/</code> ficam laranjas e iniciados com <code>pasta3/</code> ficam vermelhos:</p>
+                <div class="links-pastas">
+                    <a href="pasta1/paginaA.html">Link 1 (pasta1 - Laranja)</a><br>
+                    <a href="pasta1/paginaB.html">Link 2 (pasta1 - Laranja)</a><br>
+                    <a href="pasta2/paginaC.html">Link 3 (pasta2 - Padrão)</a><br>
+                    <a href="pasta3/paginaD.html">Link 4 (pasta3 - Vermelho)</a>
+                </div>
+            </div>
+
+            <!-- Exemplo 3: Na prática! Termina com ($=) e Contém (*=) -->
+            <div class="card-exemplo">
+                <h3>3. Na prática: Termina com ($=) e Contém (*=)</h3>
+                <p>Links para arquivos <code>.pdf</code> e links contendo a palavra <code>especial</code>:</p>
+                <div class="links-extras">
+                    <a href="documentos/apostila.pdf">Baixar Apostila (.pdf - Verde)</a><br>
+                    <a href="paginas/artigo-especial-aula.html">Artigo Especial (Contém "especial" - Roxo)</a><br>
+                    <a href="paginas/geral.html">Página Geral (Padrão)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita (Side - 25%) -->
+        <div class="column side" id="layout">
+            <h3>Layout Responsivo</h3>
+            <p>Em computadores (desktop), este layout utiliza 3 colunas desiguais lado a lado:</p>
+            <ul>
+                <li>Esquerda: 25%</li>
+                <li>Centro: 50%</li>
+                <li>Direita: 25%</li>
+            </ul>
+            <div class="dica-responsiva">
+                <p>💡 <strong>Teste em sala:</strong> Diminua a largura da janela do navegador para menos de 600px para ver as colunas se empilharem automaticamente em 1 coluna única!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 4. RODAPÉ (Footer) - Imagem 15 da aula -->
+    <div class="footer" id="contato">
+        <p>Desenvolvido na Aula 07 - Curso de CSS &copy; Ctrl+Young</p>
+    </div>
+
+</body>
+</html>

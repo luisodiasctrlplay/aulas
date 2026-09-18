@@ -1,0 +1,197 @@
+/* ============================================================
+   1. HIERARQUIA DOM E HERANÇA
+   ============================================================ */
+
+/* Configura fonte padrão para todo o corpo do documento */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* O elemento <h3> está mais abaixo na hierarquia DOM,
+   portanto sua formatação tem preferência em relação ao <body> */
+h3 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* ============================================================
+   2. CABEÇALHO (HEADER) - Imagem 09 da aula
+   ============================================================ */
+header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* ============================================================
+   3. BARRA DE NAVEGAÇÃO (TOPNAV) - Imagem 10 da aula
+   ============================================================ */
+/* Definindo uma barra de navegação para o topo do site */
+.topnav {
+    overflow: hidden;
+    background-color: orange;
+}
+
+/* Formatando links descendentes da barra de navegação */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Os links trocam a cor quando o mouse está por cima */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* ============================================================
+   4. CONTEÚDO EM COLUNAS - Imagens 12 e 14 da aula
+   ============================================================ */
+
+/* Base para as colunas: flutuar à esquerda */
+.column {
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Coluna da esquerda e da direita (25% cada) */
+.column.side {
+    width: 25%;
+    background-color: #ffffff;
+    min-height: 480px;
+    border: 1px solid #e1e8ed;
+}
+
+/* Coluna do meio (50% do total) */
+.column.middle {
+    width: 50%;
+    background-color: #ffffff;
+    min-height: 480px;
+    border: 1px solid #e1e8ed;
+    border-left: none;
+    border-right: none;
+}
+
+/* Clearfix: Limpa a flutuação para que as colunas não invadam o rodapé */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ============================================================
+   5. EXPRESSÕES REGULARES (SELETORES DE ATRIBUTO)
+   ============================================================ */
+
+/* 5.1 Exatamente igual (=) - Imagem 06 da aula */
+/* Formata apenas a <img> com caminho exato igual a img/imagem2.jpg */
+img[src = "img/imagem2.jpg"] {
+    border-radius: 50%;
+    border: 3px solid #e67e22;
+}
+
+/* Estilo auxiliar para a galeria de imagens de exemplo */
+.galeria-imagens img {
+    width: 90px;
+    height: 90px;
+    margin: 5px 10px;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 5.2 Inicia com (^=) - Imagem 08 da aula */
+/* Links iniciados com a palavra "pasta1/" ficam laranjas */
+a[href ^= "pasta1/"] {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Links iniciados com a palavra "pasta3/" ficam vermelhos */
+a[href ^= "pasta3/"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* 5.3 Termina com ($=) - Seção "Na prática!" da aula */
+/* Links que terminam com a extensão .pdf ficam verdes */
+a[href $= ".pdf"] {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* 5.4 Contém (*=) - Seção "Na prática!" da aula */
+/* Links cujo endereço contenha a palavra "especial" */
+a[href *= "especial"] {
+    color: #8e44ad;
+    font-weight: bold;
+    text-decoration: underline wavy;
+}
+
+/* Estilos visuais dos blocos de exemplo */
+.card-exemplo {
+    background-color: #f8fafc;
+    border-left: 4px solid #3498db;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.nota-explicativa, .dica-responsiva {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffb300;
+    padding: 10px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   6. RESPONSIVIDADE (MEDIA QUERY) - Imagem 13 da aula
+   ============================================================ */
+
+/* Quando a tela tiver largura menor ou igual a 600px (celulares),
+   as colunas passam a ocupar 100% da largura (uma abaixo da outra) */
+@media screen and (max-width: 600px) {
+    .column, .column.side, .column.middle {
+        width: 100%;
+        min-height: auto;
+        border-left: 1px solid #e1e8ed;
+        border-right: 1px solid #e1e8ed;
+        border-bottom: none;
+    }
+}
+
+/* ============================================================
+   7. RODAPÉ (FOOTER) - Imagem 15 da aula
+   ============================================================ */
+.footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #ddd;
+    font-size: 0.9em;
+    color: #555;
+}

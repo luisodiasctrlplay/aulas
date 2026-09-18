@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 06 - Combinadores e Seletores Especiais</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header>
+        <h1>Aula 06: Combinadores e Seletores Avançados</h1>
+        <p class="subtitulo">Exemplos práticos do material da aula do Ctrl+Young</p>
+    </header>
+
+    <!-- 1. COMBINADORES -->
+    <section class="bloco-aula" id="bloco-combinadores">
+        <h2>1. Combinadores CSS</h2>
+
+        <!-- 1.1 Descendente (espaço) -->
+        <article class="exemplo-card" id="exemplo-descendente">
+            <h3>1.1 Descendente (espaço) - <code>table h2</code></h3>
+            <p>Formata apenas o <code>&lt;h2&gt;</code> que está dentro de <code>&lt;table&gt;</code> (fica laranja):</p>
+            <table>
+                <tr>
+                    <th><h2>Eletrônicos</h2></th>
+                </tr>
+                <tr>
+                    <td>Computador</td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- 1.2 Filho (>) -->
+        <article class="exemplo-card" id="exemplo-filho">
+            <h3>1.2 Filho imediato (&gt;) - <code>div &gt; p</code></h3>
+            <p>Apenas os parágrafos que são filhos imediatos de <code>&lt;div&gt;</code> recebem cor de fundo azul:</p>
+            <div class="container-filho">
+                <p>Parágrafo 1 no div.</p>
+                <p>Parágrafo 2 no div.</p>
+                <center><p>Parágrafo 3 no div. (dentro de center, apenas descendente)</p></center>
+            </div>
+            <p>Parágrafo 4. Não está no div.</p>
+            <p>Parágrafo 5. Não está no div.</p>
+        </article>
+
+        <!-- 1.3 Irmão Adjacente (+) -->
+        <article class="exemplo-card" id="exemplo-adjacente">
+            <h3>1.3 Irmão Adjacente (+) - <code>#PróximoParágrafo + p</code></h3>
+            <p>Apenas o parágrafo que vem imediatamente após o identificador é ampliado:</p>
+            <p>Texto</p>
+            <br id="PróximoParágrafo">
+            <p>Texto 2 (Adjacente formatado)</p>
+            <p>Texto 3</p>
+        </article>
+
+        <!-- 1.4 Irmão Geral (~) -->
+        <article class="exemplo-card" id="exemplo-irmao-geral">
+            <h3>1.4 Irmão Geral (~) - <code>div ~ p</code></h3>
+            <p>Todos os parágrafos irmãos codificados após a <code>&lt;div&gt;</code> recebem cor de fundo verde:</p>
+            <div class="container-irmao">
+                <p>Parágrafo 1</p>
+                <div>
+                    <code>código...</code>
+                    <p>Parágrafo 2</p>
+                </div>
+                <p>Parágrafo 3</p>
+                <code>código...</code>
+                <p>Parágrafo 4</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- 2. PSEUDO-CLASSES E PSEUDO-ELEMENTOS -->
+    <section class="bloco-aula" id="bloco-pseudo">
+        <h2>2. Pseudo-Classes e Pseudo-Elementos</h2>
+
+        <!-- 2.1 Hover -->
+        <article class="exemplo-card" id="exemplo-hover">
+            <h3>2.1 Pseudo-classe <code>:hover</code> (Passar o mouse)</h3>
+            <p>Passe o cursor sobre a imagem para vê-la em preto e branco (<code>filter: grayscale(100%)</code>):</p>
+            <img class="img-hover" src="https://nyc3.digitaloceanspaces.com/astro-space-prod/courses/book-images/.cache/tmp6kfnd0t1.upload/compressed_images/680c816f-7432-4fc9-aa7d-ab406a512379-image18.png" alt="Logotipo CSS" />
+        </article>
+
+        <!-- 2.2 First-letter -->
+        <article class="exemplo-card" id="exemplo-first-letter">
+            <h3>2.2 Pseudo-elemento <code>::first-letter</code></h3>
+            <p class="texto-capitular">Você já deve ter visto em alguns livros, a primeira letra de um parágrafo muito maior que as demais. O pseudo-elemento first-letter formata essa letra automaticamente.</p>
+        </article>
+    </section>
+
+    <!-- 3. SELETORES ESTRUTURAIS (:nth-child) -->
+    <section class="bloco-aula" id="bloco-nth">
+        <h2>3. Seletores Estruturais (<code>:nth-child</code>)</h2>
+
+        <!-- 3.1 Tabela Zebrada -->
+        <article class="exemplo-card" id="exemplo-zebra">
+            <h3>3.1 Tabela Zebrada (Imagem 12 e 14)</h3>
+            <p>Pares em laranja (<code>even</code>) e ímpares em azul (<code>odd</code>):</p>
+            <table class="tabela-zebra">
+                <tr><th>Z</th></tr>
+                <tr><td>e</td></tr>
+                <tr><td>b</td></tr>
+                <tr><td>r</td></tr>
+                <tr><td>a</td></tr>
+            </table>
+        </article>
+
+        <!-- 3.2 Tabela Prática do Brasileirão (Comentário da Aula) -->
+        <article class="exemplo-card" id="exemplo-brasileirao">
+            <h3>3.2 Exemplo Prático: Tabela do Brasileirão</h3>
+            <p>Exemplo com <code>:nth-child</code> e <code>:hover</code> aplicado aos escudos:</p>
+            <table class="tabela-brasileirao">
+                <tr>
+                    <th>Posição</th>
+                    <th>Clubes</th>
+                    <th>Pontos</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img class="escudo" src="https://ssl.gstatic.com/onebox/media/sports/logos/KLDWYp-H8CAOT9H_JgizRg_48x48.png" alt="Botafogo" />
+                        Botafogo
+                    </td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <img class="escudo" src="https://ssl.gstatic.com/onebox/media/sports/logos/me10ephzRxdj45zVq1Risg_48x48.png" alt="Fortaleza" />
+                        Fortaleza
+                    </td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <img class="escudo" src="https://ssl.gstatic.com/onebox/media/sports/logos/7spurne-xDt2p6C0imYYNA_48x48.png" alt="Palmeiras" />
+                        Palmeiras
+                    </td>
+                    <td>47</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- 3.3 Listas com nth-child -->
+        <article class="exemplo-card" id="exemplo-lista">
+            <h3>3.3 Lista com <code>:nth-child()</code> (Imagem 15)</h3>
+            <p>O 2º item fica vermelho e os itens ímpares ficam verdes:</p>
+            <ul class="lista-exemplo">
+                <li>Item 1 (ímpar - verde)</li>
+                <li>Item 2 (2º item - vermelho)</li>
+                <li>Item 3 (ímpar - verde)</li>
+                <li>Item 4 (par - padrão)</li>
+                <li>Item 5 (ímpar - verde)</li>
+            </ul>
+        </article>
+    </section>
+
+</body>
+</html>

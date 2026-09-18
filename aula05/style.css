@@ -1,0 +1,30 @@
+/* Seletor por tipo de elemento */
+h1, h2, h3 {
+    font-family: Comic Sans MS;
+    text-align: center;
+}
+
+/* Seletor por classe */
+.italicoLinha {
+    font-style: italic;
+    border-bottom: solid;
+}
+
+/* Seletores por identificador (id) */
+#textoExemplo {
+    color: #FF7F00;
+    font-size: 1.2em;
+}
+
+#destaque {
+    font-weight: bold;
+    font-style: italic;
+    color: orange;
+    background-color: #cccccc;
+    width: 70%;
+}
+
+#idUm {
+    background-color: #fff000;
+    width: 70%;
+}
