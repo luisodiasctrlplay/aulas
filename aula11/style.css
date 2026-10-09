@@ -1,0 +1,243 @@
+/* Importação da fonte Dosis do Google Fonts (Aula 10 - Imagem 05) */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+/* Reset global para eliminar espaçamentos indesejados (Aula 10 - Imagem 05) */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Configuração do fundo e tamanho da fonte padrão do corpo da página (Aula 10 - Imagem 05) */
+body {
+    background-color: black;
+    font-size: 20px;
+}
+
+/* ============================================================
+   ESTILIZAÇÃO DO TOPO DA FICHA (Aula 10 - Imagem 07)
+   ============================================================ */
+
+/* Ocupa a largura total da janela e centraliza o bloco com flexbox */
+.topo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contêiner da ficha com fundo cinza-claro e grade de 3 colunas */
+.conteiner-topo {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 900px;
+    height: 150px;
+}
+
+/* Espaçamento interno das divisões dentro do contêiner */
+.conteiner-topo>div {
+    padding: 10px;
+}
+
+/* Formatação e alinhamento dos textos dos rótulos */
+.conteiner-topo>div p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Formatação dos campos de entrada de texto */
+.conteiner-topo>div input {
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL (Imagem 06)
+   ============================================================ */
+
+/* Contêiner principal: coluna centralizada ocupando a largura da janela */
+.conteiner-conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+/* Layout de três colunas do conteúdo da página (display grid) */
+.sessao-conteudo-principal {
+    width: 900px;
+    height: 600px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    padding: 50px 0px;
+}
+
+/* Coluna dos modificadores: organiza o conteúdo em coluna com flex */
+.conteiner-modificadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+/* Rótulos dos modificadores centralizados e em negrito */
+.conteiner-modificadores>div p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Campos de entrada dos modificadores */
+.conteiner-modificadores>div input {
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+/* ============================================================
+   CAMPOS "VIDA", "DEFESA", "VELOCIDADE" E IMAGEM (Imagem 07)
+   ============================================================ */
+
+/* Coluna central: campos empilhados em coluna */
+.conteiner-vdv-img {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Vida, defesa e velocidade uma ao lado da outra (display grid) */
+.conteiner-vdv {
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-left: 50px;
+}
+
+/* Rótulos de vida, defesa e velocidade */
+.conteiner-vdv>div p {
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Campos de entrada de vida, defesa e velocidade */
+.conteiner-vdv>div input {
+    border-radius: 5px;
+    height: 30px;
+    width: 95%;
+    padding: 5px;
+}
+
+/* Contêiner da imagem: centraliza horizontal e verticalmente com flex */
+.conteiner-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem do personagem */
+.conteiner-img img {
+    width: 80%;
+    height: 100%;
+    padding-left: 50px;
+}
+
+/* ============================================================
+   CAMPO DE "BIOGRAFIA" (Imagem 08)
+   ============================================================ */
+
+/* Título e área de texto dispostos em coluna */
+.conteiner-biografia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Espaçamento abaixo do título */
+.conteiner-biografia h2 {
+    padding-bottom: 15px;
+}
+
+/* Área de texto da biografia */
+.conteiner-biografia textarea {
+    border-radius: 10px;
+    resize: none;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+/* ============================================================
+   SEÇÃO DE CONTEÚDO SECUNDÁRIO (Imagem 09)
+   ============================================================ */
+
+/* Layout de duas colunas para equipamentos e características (display grid) */
+.sessao-conteudo-secundario {
+    width: 900px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    background-color: whitesmoke;
+}
+
+/* Espaçamento abaixo dos títulos da seção secundária */
+.sessao-conteudo-secundario>div>h2 {
+    padding-bottom: 15px;
+}
+
+/* Áreas de texto da seção secundária */
+.sessao-conteudo-secundario>div>textarea {
+    width: 80%;
+    border-radius: 10px;
+    resize: none;
+}
+
+/* Contêiner de equipamentos */
+.conteiner-equipamento {
+    width: 100%;
+    text-align: center;
+}
+
+/* Contêiner de características */
+.conteiner-caracteristicas {
+    width: 100%;
+    text-align: center;
+}
+
+/* ============================================================
+   RODAPÉ (Imagem 10)
+   ============================================================ */
+
+/* Rodapé: elementos lado a lado e centralizados com display flex */
+footer {
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contêiner do rodapé com cor de fundo alterada */
+.conteiner-rodape {
+    width: 900px;
+    background-color: #d4d4d4;
+    text-align: center;
+}
+
+/* Link do rodapé sem a linha sublinhada */
+.conteiner-rodape a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: italic;
+    padding: 10px;
+}

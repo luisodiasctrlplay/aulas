@@ -1,0 +1,260 @@
+/* ============================================================
+   ESTILOS GERAIS DA PÁGINA (ESTRUTURA E DIDÁTICA)
+   ============================================================ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 850px;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.cabecalho-principal {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-principal h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.secao-aula {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.exemplo-card {
+    border-left: 4px solid #3498db;
+    background-color: #fafbfc;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   1. FORMATAÇÃO DA PÁGINA (BOX, BORDER-RADIUS E BOX-SIZING)
+   ============================================================ */
+
+/* 1.1 Arredondando bordas com border-radius - Imagem 04 da aula */
+#box-arredondada {
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#box-arredondada h1, #box-cantos-diferentes h1 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+/* Variação mencionada no texto da aula: 4 cantos diferentes */
+#box-cantos-diferentes {
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    padding: 20px;
+    border-radius: 20px 80px 50px 150px;
+    box-sizing: border-box;
+}
+
+/* 1.2 Fixando tamanho da box com box-sizing - Imagem 05 da aula */
+#box-sizing-demo {
+    width: 300px;
+    height: 260px;
+    background: lightgreen;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#box-sizing-demo h1 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* 1.3 Adicionando imagem de fundo e transparência rgba - Imagens 06 e 07 da aula */
+#box-imagem-fundo {
+    width: 500px;
+    max-width: 100%;
+    height: 300px;
+    background: url("imagens/figura1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cabeçalho do texto da box com transparência de 80% (alfa 0.8) */
+#box-imagem-fundo h1 {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid white;
+    margin: 0;
+    padding: 15px;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+#box-imagem-fundo p {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* ============================================================
+   2. EFEITOS ESTÁTICOS (DEGRADÊS E SOMBRAS)
+   ============================================================ */
+
+.grade-degrades {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.box-degrade {
+    width: 220px;
+    height: 180px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* 2.1.1 linear-gradient padrão (cima para baixo) - Imagem 08 da aula */
+#box-gradiente-linear {
+    background: linear-gradient(red, green);
+}
+
+/* 2.1.2 linear-gradient da direita para esquerda (to left) - Imagem 09 da aula */
+#box-gradiente-direcao {
+    background: linear-gradient(to left, red, green);
+}
+
+/* 2.1.3 radial-gradient (círculos a partir do centro) - Imagem 10 da aula */
+#box-gradiente-radial {
+    background: radial-gradient(white, blue, yellow, green);
+}
+
+/* 2.2 Exemplo Integrado: Cursos com degradê e sombras - Imagens 11, 12 e 13 da aula */
+.area-cursos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.box-curso {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(green, yellow);
+    box-shadow: -5px 10px 5px 3px red,
+                5px -10px 5px 4px blue;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.box-curso h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: -5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box-curso p {
+    color: #1a252f;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ============================================================
+   3. EFEITOS DINÂMICOS (ANIMAÇÕES E TRANSIÇÕES)
+   ============================================================ */
+
+/* 3.1 Animação com @keyframes - Imagem 14 da aula */
+@keyframes animacao {
+    from {
+        background: orange;
+        border-radius: 0px;
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        background: blue;
+        border-radius: 100px;
+        top: 0px;
+        left: 350px;
+        color: white;
+    }
+}
+
+.pista-animacao {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 15px;
+    overflow: hidden;
+    min-height: 160px;
+}
+
+#box-animada {
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    background: orange;
+    position: relative;
+    animation: animacao 8s 1s infinite alternate;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#box-animada p {
+    margin: 0;
+}
+
+/* 3.2 Transições no :hover - Imagem 15 da aula */
+#box-transicao {
+    width: 300px;
+    height: 100px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 3s, width 5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao passar o mouse: altera cor para azul e largura para 500px suavemente */
+#box-transicao:hover {
+    width: 500px;
+    max-width: 100%;
+    background: blue;
+}

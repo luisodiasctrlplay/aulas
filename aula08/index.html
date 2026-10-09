@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08 - Recursos Modernos do CSS3</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <h1>Aula 08: Recursos Modernos do CSS3</h1>
+        <p class="subtitulo">Formatação de Caixas, Degradês, Sombras, Transições e Animações</p>
+    </header>
+
+    <!-- 1. FORMATAÇÃO DA PÁGINA (BOX, BORDER-RADIUS E BOX-SIZING) -->
+    <section class="secao-aula" id="secao-formatacao">
+        <h2>1. Formatação de Caixa (Box)</h2>
+
+        <!-- 1.1 Border-radius (Imagens 02, 03 e 04) -->
+        <article class="exemplo-card">
+            <h3>1.1 Arredondando Bordas com <code>border-radius</code> (Imagens 02 a 04)</h3>
+            <p>Bordas arredondadas simples com <code>border-radius: 20px</code> e <code>padding: 20px</code>:</p>
+            <div id="box-arredondada" class="box-demonstracao">
+                <h1>Sobre</h1>
+                <p>Somos uma escola de programação e robótica.</p>
+            </div>
+
+            <p style="margin-top: 15px;">Cantos com valores diferentes (<code>border-radius: 20px 80px 50px 150px</code>):</p>
+            <div id="box-cantos-diferentes" class="box-demonstracao">
+                <h1>Cantos</h1>
+                <p>Cada extremidade com um raio de curvatura personalizado.</p>
+            </div>
+        </article>
+
+        <!-- 1.2 Box-sizing (Imagem 05) -->
+        <article class="exemplo-card">
+            <h3>1.2 Fixando o Tamanho com <code>box-sizing: border-box</code> (Imagem 05)</h3>
+            <p>O <code>padding: 50px</code> não altera as dimensões fixadas de 300px x 400px:</p>
+            <div id="box-sizing-demo" class="box-demonstracao">
+                <h1>Tamanho Fixo</h1>
+                <p>Com <code>border-box</code>, o padding e a borda ficam dentro das dimensões da caixa.</p>
+            </div>
+        </article>
+
+        <!-- 1.3 Imagem de fundo e Transparência rgba (Imagens 06 e 07) -->
+        <article class="exemplo-card">
+            <h3>1.3 Imagem de Fundo e Transparência <code>rgba()</code> (Imagens 06 e 07)</h3>
+            <p>Cabeçalho com fundo 80% transparente (<code>background: rgba(255, 255, 255, 0.8)</code>) e linha branca:</p>
+            <div id="box-imagem-fundo" class="box-demonstracao">
+                <h1>Sobre a Escola</h1>
+                <p>O texto sobre a imagem fica fácil de ler graças ao fundo semi-transparente.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- 2. EFEITOS ESTÁTICOS (DEGRADÊS E SOMBRAS) -->
+    <section class="secao-aula" id="secao-estaticos">
+        <h2>2. Efeitos Estáticos: Degradês e Sombras</h2>
+
+        <!-- 2.1 Degradês (Imagens 08, 09 e 10) -->
+        <article class="exemplo-card">
+            <h3>2.1 Degradês: Linear e Radial (Imagens 08 a 10)</h3>
+            <div class="grade-degrades">
+                <div id="box-gradiente-linear" class="box-degrade">
+                    <h4>linear-gradient (red, green)</h4>
+                </div>
+                <div id="box-gradiente-direcao" class="box-degrade">
+                    <h4>to left (red, green)</h4>
+                </div>
+                <div id="box-gradiente-radial" class="box-degrade">
+                    <h4>radial-gradient (multicolor)</h4>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2.2 Exemplo Integrado: Cursos com Degradê e Sombras (Imagens 11, 12 e 13) -->
+        <article class="exemplo-card">
+            <h3>2.2 Exemplo Prático: Cursos Ctrl+Play com <code>box-shadow</code> e <code>text-shadow</code> (Imagens 11 a 13)</h3>
+            <div class="area-cursos">
+                <div class="box-curso">
+                    <h2>Code Kids</h2>
+                    <p>O Code Kids possui a carga horária de 108 horas-aula, dividido em 3 módulos e foi especialmente criado para crianças de 7 a 9 anos.</p>
+                </div>
+                <div class="box-curso">
+                    <h2>Senior Play</h2>
+                    <p>O Senior Play é um curso para jovens senhores(as) que desejam uma completa imersão no mundo tecnológico!</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- 3. EFEITOS DINÂMICOS (ANIMAÇÕES E TRANSIÇÕES) -->
+    <section class="secao-aula" id="secao-dinamicos">
+        <h2>3. Efeitos Dinâmicos: Animações e Transições</h2>
+
+        <!-- 3.1 Animações (@keyframes) (Imagem 14) -->
+        <article class="exemplo-card">
+            <h3>3.1 Animação com <code>@keyframes</code> (Imagem 14)</h3>
+            <p>A caixa altera cor, raio da borda (de quadrado para círculo) e posição horizontal automaticamente:</p>
+            <div class="pista-animacao">
+                <div id="box-animada">
+                    <p>Animação</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3.2 Transições (transition) (Imagem 15) -->
+        <article class="exemplo-card">
+            <h3>3.2 Transição Suave com <code>transition</code> no <code>:hover</code> (Imagem 15)</h3>
+            <p>Passe o cursor do mouse sobre a caixa para observar a transição suave de cor (3s) e largura (5s):</p>
+            <div id="box-transicao">
+                <p>Passe o mouse aqui!</p>
+            </div>
+        </article>
+    </section>
+
+</body>
+</html>
